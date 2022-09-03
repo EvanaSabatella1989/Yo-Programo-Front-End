@@ -119,4 +119,13 @@
     font-size: 1.5em;
     margin-top: 20px;
     
+    
+}
+
+.container{
+    margin-bottom: 30px
+}
+
+.descripcion{
+    text-decoration: none;
 }
