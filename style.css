@@ -100,3 +100,23 @@
     
     
 }
+
+.hard, .soft{
+    font-size: 1.6em;
+    text-decoration: underline;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.skills, .proyectos{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.skill{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    
+}
