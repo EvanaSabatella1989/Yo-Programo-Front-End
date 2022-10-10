@@ -4,10 +4,7 @@
 } */
 
 .head{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 50px;
+    
     margin: 0px 20px;
     
    
@@ -19,7 +16,7 @@
     align-items: center;
 }
 .logo{
-    width: 10%;
+    width: 50px;
     height: 100%;
     border-radius: 50%;
     margin-right: 10px;
@@ -29,8 +26,19 @@
     font-size: 1.25em;
 }
 
+.redLog{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
 .redes{
+    
     margin-right: 20px;
+    
+    
 
 }
 .banner{
@@ -67,9 +75,22 @@
     
 }
 
-.row{
+/* .row{
     display: flex;
     flex-direction: row;
+} */
+
+.cabecera{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logoTitulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .experiencia, .educacion{
@@ -84,6 +105,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    
     
 }
 
@@ -126,6 +148,6 @@
     margin-bottom: 30px
 }
 
-.descripcion{
+.thumbnail a{
     text-decoration: none;
 }
