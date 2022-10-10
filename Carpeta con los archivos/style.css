@@ -151,3 +151,17 @@
 .thumbnail a{
     text-decoration: none;
 }
+
+footer{
+    align-items: center;
+    height: 140px;
+}
+
+
+
+
+.container .redes{
+    text-align: center;
+    /* height: 10%; */
+    margin: 80px auto;
+}
