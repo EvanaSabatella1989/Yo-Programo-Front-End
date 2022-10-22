@@ -1,66 +1,28 @@
 <div class="container-fluid">
     <div class="card mat-card">
         <h1 class="educacion">Educacion</h1>
-        <div class="row">
-            <div class="col-sm-4"><img class="logos" src="../assets/logo.jpg" alt=""></div>
-            <div class="col-sm-6">
-                <h2>Front End Developer</h2>
-                <h3>Jornada Parcial</h3>
-                <p>Marzo 2019 - Febrero 2020 - 11 meses</p>
-                <p>Colombia </p>
-            </div>
-            <div class="col-sm-2 botones">
-                <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
+        <ul>
+            <li *ngFor="let educacion of educacionList">
 
-            </div>
+                <div class="row">
+                    <div class="col-sm-4"><img class="logos" [src]="educacion.img" alt=""></div>
+                    <div class="col-sm-6">
+                        <h2>{{educacion.study}}</h2>
+                        <h3>{{educacion.company}}</h3>
+                        <p>{{educacion.start}} - {{educacion.end}} - {{educacion.timeElapsed}}</p>
 
-        </div>
+                    </div>
+                    <div class="col-sm-2 botones">
+                        <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
+                        <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
 
-        <div class="row">
-            <div class="col-sm-4"><img class="logos" src="../assets/alura.jpg" alt=""></div>
-            <div class="col-sm-6">
-                <h2>Front End Developer</h2>
-                <h3>Jornada Completa</h3>
-                <p>Abril 2020 - Junio 2021 - 1 año y 2 meses</p>
-                <p>Colombia </p>
-            </div>
-            <div class="col-sm-2 botones">
-                <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
+                    </div>
 
-            </div>
-        </div>
+                </div>
+            </li>
+        </ul>
 
-        <div class="row">
-            <div class="col-sm-4"><img class="logos" src="../assets/ispc.png" alt=""></div>
-            <div class="col-sm-6">
-                <h2>Front End Developer</h2>
-                <h3>Jornada Completa</h3>
-                <p>Abril 2020 - Junio 2021 - 1 año y 2 meses</p>
-                <p>Colombia </p>
-            </div>
-            <div class="col-sm-2 botones">
-                <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
 
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-sm-4"><img class="logos" src="../assets/codo.jpg" alt=""></div>
-            <div class="col-sm-6">
-                <h2>Front End Developer</h2>
-                <h3>Jornada Completa</h3>
-                <p>Abril 2020 - Junio 2021 - 1 año y 2 meses</p>
-                <p>Colombia </p>
-            </div>
-            <div class="col-sm-2 botones">
-                <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
-
-            </div>
-
-        </div>
     </div>
 </div>

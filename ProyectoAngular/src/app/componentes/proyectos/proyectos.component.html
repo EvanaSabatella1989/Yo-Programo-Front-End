@@ -3,76 +3,29 @@
         <h1 class="proyectos">Proyectos</h1>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="https://github.com/EvanaSabatella1989/Yo-Programo-Front-End" target="_blank">
-                            <img src="../assets/portfolio.png" alt="Lights" style="width:100%">
-                            <div class="caption">
-                                <p>Aplicación web full stack, que muestra misdatos personales, estudios
-                                    cursados,
-                                    experiencia laboral, conocimiento de las tecnologías y demas. Es una
-                                    aplicación
-                                    de
-                                    arquitectura distribuida y conteniene un
-                                    diseño de interfaz de usuario (front end) que muestra la información, una
-                                    base
-                                    de
-                                    datos que almacena los datos antes mencionados y cuenta con las APIs
-                                    necesarias
-                                    para
-                                    proveer a través de internet la información (back end).
-                                </p>
+                <ul>
+                    <li *ngFor="let proyecto of proyectoList">
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <a href="https://github.com/EvanaSabatella1989/Yo-Programo-Front-End" target="_blank">
+                                    <img [src]="proyecto.image" alt="Lights" style="width:100%">
+                                    <div class="caption">
+                                        <p>{{proyecto.description}}
+                                        </p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="botones">
-                        <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                        <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
+                            <div class="botones">
+                                <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
+                                <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
+                                </div>
 
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="https://relaxed-turing-d52def.netlify.app/index.html" target="_blank">
-                            <img src="../assets/Mind.png" alt="Nature" style="width:100%">
-                            <div class="caption">
-                                <p>Pagina Web de un Gym desarrollado en el 2021. El proyecto contiene etiquetas
-                                    semanticas para estructurar el sitio de forma correcta, un formulario de
-                                    contacto
-                                    con validacion mediante JavaScript. Ademas se utilizaron iframes, iconos de
-                                    FontAwesome y fuentes tanto locales como de Google Fonts. El proyecto es
-                                    totalmente
-                                    responsivo, con 3 puntos de corte para 3 tamaños de dispositivos(PC
-                                    escritorio,
-                                    Tablet, Celular)</p>
                             </div>
-                        </a>
-                    </div>
-                    <div class="botones">
-                        <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                        <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
+                        </div>
+                    </li>
+                </ul>
 
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <a href="https://github.com/EvanaSabatella1989/Proyecto-Django" target="_blank">
-                            <img src="../assets/AppDjango.jpg" alt="Fjords" style="width:100%">
-                            <div class="caption">
-                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Excepturi maiores nulla a
-                                    soluta dignissimos, eaque, obcaecati assumenda consequatur sunt nesciunt
-                                    expedita
-                                    nostrum dolorem natus earum. Velit dicta quas labore eius?</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="botones">
-                        <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                        <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a></div>
 
-                    </div>
-                </div>
             </div>
         </div>
     </div>

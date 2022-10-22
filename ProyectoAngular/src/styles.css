@@ -101,6 +101,12 @@
     margin-top: 20px;
 }
 
+ul{
+    list-style: none;
+}
+
+
+
 .botones{
     display: flex;
     flex-direction: row;
