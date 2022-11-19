@@ -159,6 +159,10 @@ ul{
     text-decoration: none;
 }
 
+#proyectoA{
+    display: block;
+}
+
 footer{
     align-items: center;
     height: 140px;

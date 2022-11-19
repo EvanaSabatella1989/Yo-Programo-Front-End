@@ -1,31 +1,26 @@
 <div class="container-fluid">
     <div class="card mat-card">
-        <h1 class="proyectos">Proyectos</h1>
+        <h1 class="proyectos">Proyectos Funcionando!!!</h1>
         <div class="container">
             <div class="row">
-                <ul>
-                    <li *ngFor="let proyecto of proyectoList">
-                        <div class="col-md-4">
-                            <div class="thumbnail">
-                                <a href="https://github.com/EvanaSabatella1989/Yo-Programo-Front-End" target="_blank">
-                                    <img [src]="proyecto.image" alt="Lights" style="width:100%">
-                                    <div class="caption">
-                                        <p>{{proyecto.description}}
-                                        </p>
-                                    </div>
-                                </a>
+                <div class="col-md-4" *ngFor="let proyecto of proyectoList">
+                    <div class="thumbnail">
+                        <a [href]="proyecto.link" target="_blank">
+                            <img [src]="proyecto.image" alt="Lights" style="width:100%" />
+                            <div class="caption">
+                                <p>{{ proyecto.description }}</p>
                             </div>
-                            <div class="botones">
-                                <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                                <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
-                                </div>
-
-                            </div>
+                        </a>
+                    </div>
+                    <div class="botones">
+                        <div class="btn-edit">
+                            <a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a>
                         </div>
-                    </li>
-                </ul>
-
-
+                        <div class="btn-delete">
+                            <a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
