@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
@@ -11,6 +11,13 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { PieDePaginaComponent } from './componentes/pie-de-pagina/pie-de-pagina.component';
 import { PorfolioService } from './servicios/porfolio.service';
 import {HttpClientModule } from '@angular/common/http';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { interceptorProvider } from './servicios/interceptor-service';
+import { NewExperienciaComponent } from './componentes/experiencia-laboral/new-experiencia.component';
+import { EditExperienciaComponent } from './componentes/experiencia-laboral/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +28,22 @@ import {HttpClientModule } from '@angular/common/http';
     EducacionComponent,
     HabilidadesComponent,
     ProyectosComponent,
-    PieDePaginaComponent
+    PieDePaginaComponent,
+    IniciarSesionComponent,
+    PortfolioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule, 
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,8 +6,8 @@
                 <div class="col-sm-6">
                     <div class="logoTitulo">
 
-                        <img class="logo" [src]="miPorfolio.logo" alt="logo Argentina Programa">
-                        <h3 class="title">{{miPorfolio.title}}</h3>
+                        <!-- <img class="logo" [src]="miPorfolio.logo" alt="logo Argentina Programa">
+                        <h3 class="title">{{miPorfolio.title}}</h3> -->
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -20,7 +20,8 @@
                             <a href="https://github.com/EvanaSabatella1989/" target="_blank"><i
                                     class="fab fa-github"></i></a>
                         </div>
-                        <button class="btn btn-success">login</button>
+                        <button class="btn btn-success" (click)="login()" *ngIf="!isLogged">login</button>
+                        <button class="btn btn-success" (click)="onLogOut()" *ngIf="isLogged">logout</button>
                     </div>
                 </div>
             </div>
