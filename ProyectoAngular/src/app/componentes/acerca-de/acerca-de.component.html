@@ -2,10 +2,13 @@
 
     <div class="card mat-card">
         <!-- <div id="profile-background" class="banner"><img class="back" [src]="acercaDe.backImage" alt=""></div> -->
+        <div id="profile-background" class="banner"><img class="back" src="./assets/images/fondo.jpg" alt=""></div>
         <div id="info" style="padding: 16px">
             <div id="info-img">
-                <!-- <img class="profile-image" [src]="acercaDe.image" alt=""> -->
-                <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+                <img class="profile-image" [src]="persona.img" alt="">
+                <!-- <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div> -->
+                <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-right"><i
+                            class="bi bi-pencil-fill"></i></a></div>
             </div>
             <div id="info-data" class="row">
                 <div class="col-sm-4 datos">
@@ -16,22 +19,27 @@
                         <!-- <span>{{acercaDe.ubication}}</span> -->
 
                     </div>
-                    <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
+                    <!-- <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div> -->
+                    <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-right"><i
+                                class="bi bi-pencil-fill"></i></a></div>
                 </div>
                 <div id="info-details" class="col-sm-6">
                     <!-- <p>{{acercaDe.about}}</p> -->
-                    <p>{{persona.img}}</p>
+
                 </div>
                 <div class="col-sm-2 botones">
-                    <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div>
-                    <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
+                    <!-- <div class="btn-edit"><a href="#" class="btn-rigth"><i class="fa fa-pen"></i></a></div> -->
+                    <div class="btn-edit" *ngIf="isLogged"><a href="#" class="btn-rigth"><i
+                                class="bi bi-pencil-fill"></i></a></div>
 
-                    </div>
+                    <!-- <div class="btn-delete"><a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a> -->
 
 
                 </div>
-            </div>
 
+
+            </div>
         </div>
+
     </div>
 </div>
