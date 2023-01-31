@@ -2,13 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Expression } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Experiencia } from '../model/experiencia';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'http://localhost:8080/explab/'
+  // expURL = 'http://localhost:8080/explab/'
+  // expURL = 'https://backendeds2.onrender.com/explab/';
+  expURL = environment.URL + 'explab/';
 
   constructor(private httpClient: HttpClient) { }
 
