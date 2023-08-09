@@ -9,6 +9,8 @@ import { EditSkillComponent } from './componentes/habilidades/edit-skill.compone
 import { NewSkillComponent } from './componentes/habilidades/new-skill.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 
 // const routes: Routes = [
 //     {path:'portfolio', component:PortfolioComponent},
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path:'editedu/:id', component: EditEducacionComponent},
   {path:'nuevaskill', component: NewSkillComponent},
   {path:'editskill/:id', component: EditSkillComponent},
-  {path:'editacercade/:id', component: EditAcercaDeComponent}
+  {path:'editacercade/:id', component: EditAcercaDeComponent},
+  {path:'nuevoproyecto', component: NewProyectoComponent},
+  {path:'editarproyecto/:id', component: EditProyectoComponent}
   
 ]
 

@@ -73,10 +73,9 @@
 
 
         <div class="container">
-            <h2 class="hard">HardSkills</h2>
+            <!-- <h2 class="hard">HardSkills</h2> -->
             <div class="col-lg-4">
-                <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">Agregar
-                    Habilidad</button>
+                <button type="button" class="btn btn-dark" routerLink="/nuevaskill" *ngIf="isLogged">+</button>
             </div>
             <ul>
                 <li *ngFor="let skill of skills">

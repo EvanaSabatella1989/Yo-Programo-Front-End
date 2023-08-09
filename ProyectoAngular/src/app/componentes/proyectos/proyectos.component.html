@@ -1,9 +1,13 @@
 <div class="container-fluid">
     <div class="card mat-card">
-        <h1 class="proyectos">Proyectos Funcionando!!!</h1>
+        <h1 class="proyectos">Proyectos</h1>
         <div class="container">
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-dark" routerLink="/nuevoproyecto" *ngIf="isLogged">Agregar 
+                </button>
+            </div>
             <div class="row">
-                <div class="col-md-4" *ngFor="let proyecto of proyectoList">
+                <!-- <div class="col-md-4" *ngFor="let proyecto of proyectoList">
                     <div class="thumbnail">
                         <a [href]="proyecto.link" target="_blank">
                             <img [src]="proyecto.image" alt="Lights" style="width:100%" />
@@ -20,7 +24,52 @@
                             <a href="#" class="btn-rigth"><i class="fa fa-trash"></i></a>
                         </div>
                     </div>
+                </div> -->
+
+                <div class="col-md-4" *ngFor="let proy of proyecto">
+                    <div class="thumbnail">
+                        <a [href]="proy.nombre" target="_blank">
+                            <img [src]="proy.img" alt="Lights" style="width:100%" />
+                            <div class="caption">
+                                <p>{{ proy.descripcion }}</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2 botones" *ngIf="isLogged">
+        
+                                <button type="button" class="btn btn-light" routerLink="/editarproyecto/{{proy.id}}"><i
+                                        class="bi bi-pencil-fill"></i></button>
+        
+                                <button type="button" class="btn btn-light" (click)="delete(proy.id)"><i
+                                        class="bi bi-trash-fill"></i></button>
+        
+                            </div>
                 </div>
+
+                <!-- <ul>
+                    <li *ngFor="let proy of proyecto">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img class="logos" [src]="proy.img" alt="imagen">
+                                
+                            </div>
+                            <div class="col-sm-6">
+                                <h2>{{proy.nombre}}</h2>
+                                <p>{{proy.descripcion}}</p>
+                            </div>
+                            <div class="col-sm-2 botones" *ngIf="isLogged">
+        
+                                <button type="button" class="btn btn-light" routerLink="/editarproyecto/{{proy.id}}"><i
+                                        class="bi bi-pencil-fill"></i></button>
+        
+                                <button type="button" class="btn btn-light" (click)="delete(proy.id)"><i
+                                        class="bi bi-trash-fill"></i></button>
+        
+                            </div>
+                        </div>
+                        <br>
+                    </li>
+                </ul> -->
             </div>
         </div>
     </div>
