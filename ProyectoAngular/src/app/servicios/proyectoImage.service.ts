@@ -11,14 +11,14 @@ export class ProyectoImageService {
 
   public uploadImage($event:any, name: string){
     const file = $event.target.files[0]
-    const imgRef = ref(this.storage, `proyectos/`+ name)
+    const imgRef = ref(this.storage, `proyecto/`+ name)
     uploadBytes(imgRef, file)
     .then(response => {this.getImages()})
     .catch(error => console.log(error))
   }
 
   getImages(){
-    const imagesRef = ref(this.storage, 'proyectos')
+    const imagesRef = ref(this.storage, 'proyecto')
     list(imagesRef)
     .then(async response => {
       for(let item of response.items){
